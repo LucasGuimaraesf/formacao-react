@@ -8,6 +8,52 @@
     
 </head>
 <body>
+    <header>
+        <h1>Pesquisa Online</h1>
+
+    </header>
+    <section>
+        <form action="" method="get">
+            <!--A tag fieldset faz um agrupamento de campos que estão relacionados-->
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+            <label for="userName">Nome:</label>
+            <input type="text" name="userName" required> <!--O require torna o campo obrigatório-->
+
+            <br>
+
+            <label for="age">Idade:</label>
+            <input type="number" name="age" min="12" max="100"> <!--o min e max define o range-->
+
+            <br>
+
+            <label for="bithDate">Data de nasceimento</label>
+            <input type="date" name="birthDate" required>
+
+            <br>
+
+            <label for="userEmail">Email</label>
+            <input type="email" name="userEmail" required>
+
+            <br>
+
+            <!--Uso do pattern: []-> os números, {}-> a quatidade de numeros-->
+            <label for="userNumberPhone">Telefone</label>
+            <input type="tel" name="userNumberPhone" pattern="[0-9]{11}" placeholder="DDD + Número sem espaços ou hífens">
+
+            <br>
+
+            <!--Upload de fotos-->
+            <!--O formato "accept="image/*" aceita qualquer formato de imagem-->
+            <label for="userImage">Upload de foto</label>
+            <input type="file" accept="image/*" name="userImage">
+
+            </fieldset>
+
+            <input type="submit">
+        </form>
+    </section>
     
 </body>
 </html>
