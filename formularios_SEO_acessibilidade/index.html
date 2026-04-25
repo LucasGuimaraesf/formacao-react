@@ -14,42 +14,60 @@
     </header>
     <section>
         <form action="" method="get">
-            <!--A tag fieldset faz um agrupamento de campos que estão relacionados-->
+            <!-- A tag fieldset faz um agrupamento de campos que estão relacionados -->
+            
             <fieldset>
                 <legend>Dados Pessoais</legend>
 
-            <label for="userName">Nome:</label>
-            <input type="text" name="userName" required> <!--O require torna o campo obrigatório-->
+                <label for="userName">Nome:</label>
+                <input type="text" name="userName" required> <!--O require torna o campo obrigatório-->
 
-            <br>
+                <br>
 
-            <label for="age">Idade:</label>
-            <input type="number" name="age" min="12" max="100"> <!--o min e max define o range-->
+                <label for="age">Idade:</label>
+                <input type="number" name="age" min="12" max="100"> <!--o min e max define o range-->
 
-            <br>
+                <br>
 
-            <label for="bithDate">Data de nasceimento</label>
-            <input type="date" name="birthDate" required>
+                <label for="bithDate">Data de nasceimento</label>
+                <input type="date" name="birthDate" required>
 
-            <br>
+                <br>
 
-            <label for="userEmail">Email</label>
-            <input type="email" name="userEmail" required>
+                <label for="userEmail">Email</label>
+                <input type="email" name="userEmail" required>
 
-            <br>
+                <br>
 
-            <!--Uso do pattern: []-> os números, {}-> a quatidade de numeros-->
-            <label for="userNumberPhone">Telefone</label>
-            <input type="tel" name="userNumberPhone" pattern="[0-9]{11}" placeholder="DDD + Número sem espaços ou hífens">
+                <!--Uso do pattern: []-> os números, {}-> a quatidade de numeros-->
+                <label for="userNumberPhone">Telefone</label>
+                <input type="tel" name="userNumberPhone" pattern="[0-9]{11}" placeholder="DDD + Número sem espaços ou hífens">
 
-            <br>
+                <br>
 
-            <!--Upload de fotos-->
-            <!--O formato "accept="image/*" aceita qualquer formato de imagem-->
-            <label for="userImage">Upload de foto</label>
-            <input type="file" accept="image/*" name="userImage">
+                <!--Upload de fotos-->
+                <!--O formato "accept="image/*" aceita qualquer formato de imagem-->
+                <label for="userImage">Upload de foto</label>
+                <input type="file" accept="image/*" name="userImage">
 
             </fieldset>
+
+            <fieldset>
+                <legend>Perfil</legend>
+
+                <p>Gênero:</p>
+                <input type="radio" name="userGender" value="Feminino">
+                <label for="userGender">Feminino</label>
+
+                <input type="radio" name="userGender" value="Masculino">
+                <label for="userGender">Masculino</label>
+
+                <input type="radio" name="userGender" value="notInformed">
+                <label for="userGender">Prefiro não informar</label>
+
+            </fieldset>
+
+            
 
             <input type="submit">
         </form>
