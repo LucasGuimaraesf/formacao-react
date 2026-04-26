@@ -19,36 +19,36 @@
             <fieldset>
                 <legend>Dados Pessoais</legend>
 
-                <label for="userName">Nome:</label>
-                <input type="text" name="userName" required> <!--O require torna o campo obrigatório-->
+                <label for="name">Nome:</label>
+                <input type="text" name="userName" id="name" required> <!--O require torna o campo obrigatório-->
 
                 <br>
 
                 <label for="age">Idade:</label>
-                <input type="number" name="age" min="12" max="100"> <!--o min e max define o range-->
+                <input type="number" name="userAge" id="age" min="12" max="100"> <!--o min e max define o range-->
 
                 <br>
 
-                <label for="bithDate">Data de nasceimento</label>
-                <input type="date" name="birthDate" required>
+                <label for="birthDate">Data de nasceimento</label>
+                <input type="date" name="userBirthDate" id="bithDate" required>
 
                 <br>
 
-                <label for="userEmail">Email</label>
-                <input type="email" name="userEmail" required>
+                <label for="email">Email</label>
+                <input type="email" name="userEmail" id="email" required>
 
                 <br>
 
                 <!--Uso do pattern: []-> os números, {}-> a quatidade de numeros-->
-                <label for="userNumberPhone">Telefone</label>
-                <input type="tel" name="userNumberPhone" pattern="[0-9]{11}" placeholder="DDD + Número sem espaços ou hífens">
+                <label for="numberPhone">Telefone</label>
+                <input type="tel" name="userNumberPhone" id="numberPhone" pattern="[0-9]{11}" placeholder="DDD + Número sem espaços ou hífens">
 
                 <br>
 
                 <!--Upload de fotos-->
                 <!--O formato "accept="image/*" aceita qualquer formato de imagem-->
-                <label for="userImage">Upload de foto</label>
-                <input type="file" accept="image/*" name="userImage">
+                <label for="image">Upload de foto</label>
+                <input type="file" accept="image/*" name="userImage" id="image">
 
             </fieldset>
 
@@ -58,19 +58,19 @@
 
                 <!--Usando radio (bolinhas de selecao)-->
                 <p>Gênero:</p>
-                <input type="radio" name="userGender" value="Feminino">
-                <label for="userGender">Feminino</label>
+                <input type="radio" name="userGender" value="Feminino" id="genderFemale">
+                <label for="genderFemale">Feminino</label>
 
-                <input type="radio" name="userGender" value="Masculino">
-                <label for="userGender">Masculino</label>
+                <input type="radio" name="userGender" value="Masculino" id="genderMale">
+                <label for="genderMale">Masculino</label>
 
-                <input type="radio" name="userGender" value="notInformed">
-                <label for="userGender">Prefiro não informar</label>
+                <input type="radio" name="userGender" value="notInformed" id="genderNotInformed">
+                <label for="genderNotInformed">Prefiro não informar</label>
                 <br>
 
                 <!--Usando Select-->
                 <label for="maritalStatus">Estado Civil:</label>
-                <select name="maritalStatus">
+                <select name="userMaritalStatus" id="maritalStatus">
                     <option value="notInformed">Selecione...</option>
                     <option value="casado">Casado</option>
                     <option value="solteiro">Solteiro</option>
@@ -79,8 +79,8 @@
                 </select>
 
                 <!--Selecionando o Estado-->
-                <label for="userState">Estado:</label>
-                <select name="userState">
+                <label for="state">Estado:</label>
+                <select name="userState" id="state">
                     <option value="notInformed">Selecione...</option>
                     <option value="acre">Acre</option>
                     <option value="alagoas">Alagoas</option>
@@ -112,15 +112,36 @@
                 </select>
 
                 <!--Campo de cidade-->
-                <label for="userCity">Cidade:</label>
-                <input type="text" name="userCity" autocomplete="address-line2" pattern="{40}" placeholder="Ex. São Paulo">
-
+                <label for="cidade" id="">Cidade:</label>
+                <input type="text" name="userCity" id="cidade" autocomplete="address-line2" pattern="{40}" placeholder="Ex. São Paulo">
 
             </fieldset>
 
-            
+            <!--Campo de Hábitos-->
+            <!--Para multiplas escolhas, basta usar o "checkbox"-->
+            <fieldset>
+                <legend>Hábitos</legend>
+                    <p>Redes Sociais:</p>
+                
+                <input type="checkbox" name="social" value="instagram" id="instagram">
+                <label for="instagram">Instagram</label>
 
+                <br>
 
+                <input type="checkbox" name="social" value="social" id="facebook">
+                <label for="facebook">Facebook</label>
+
+                <br>
+
+                <input type="checkbox" name="social" value="social" id="linkedin">
+                <label for="linkedin">LikedIn</label>
+
+                <br>
+
+                <input type="checkbox" name="social" value="social" id="x">
+                <label for="x">X</label>
+
+            </fieldset>
 
             <input type="submit">
         </form>
